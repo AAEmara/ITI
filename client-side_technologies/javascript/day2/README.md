@@ -1,12 +1,15 @@
 # JavaScript Lab1
 
 ## Table of Contents
-  - [Exercise 1](#exercise-1)
-  - [Exercise 2](#exercise-2)
-  - [Exercise 3](#exercise-3)
-  - [Exercise 4](#exercise-4)
+  - Lab 1
+    - [Exercise 1](#exercise-1)
+    - [Exercise 2](#exercise-2)
+    - [Exercise 3](#exercise-3)
+    - [Exercise 4](#exercise-4)
+    - [Note on Factorials](#note-on-factorials)
 
-## Exercise 1
+## Lab 1
+### Exercise 1
   1. Build a function that validates user input (e.g., age) and throws custom 
   errors for invalid values.
      - Ex:  
@@ -16,6 +19,9 @@
     ```
   - [Exercise 1 Solution](./1-function.js)
 
+---
+
+### Exercise 2
   2. Tell the output of this operation, mentioning the reason for your answer 
   (precedence orders)  
      ```javascript
@@ -24,6 +30,9 @@
      - The output is **162**.
   - [Exercise 2 Solution](./2-operation.js)
 
+---
+
+### Exercise 3
   3. Build a program that calculates the factorial of a number 
   (\* factorial meaning is defined below)  
      - Ex:  
@@ -33,6 +42,9 @@
      ```
   - [Exercise 3 Solution](./3-factorial.js)
 
+---
+
+### Exercise 4
   4. Create a calculator that takes two numbers and an operator (+, -, \*, /) 
   as input and performs the corresponding operation.
      - Ex:  
@@ -43,6 +55,7 @@
 
 ---
 
+### Note on Factorials
 The **factorial** of a number n (denoted as n!) is the product of all positive 
 integers from 1 to n. It is defined as:
 

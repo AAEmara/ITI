@@ -1,7 +1,7 @@
 # JavaScript Lab1
 
 ## Table of Contents
-  - Lab 1
+  - [Lab 1](#lab-1)
     - [Exercise 1](#exercise-1)
     - [Exercise 2](#exercise-2)
     - [Exercise 3](#exercise-3)

@@ -16,7 +16,8 @@
   }
   console.log(x)
   ```
-    - [Solution of Problem 1](./1-solution.md)
+  - [Solution of Problem 1](./1-solution.md)
+
 
   2.
   ```javascript
@@ -24,14 +25,15 @@
   obj.name = "Bob";
   console.log(obj.name);
   ```
-    - [Solution of Problem 2](./2-solution.md)
+  - [Solution of Problem 2](./2-solution.md)
+
   3.
   ```javascript
   const x = 10;
   x = 20;
   console.log(x);
   ```
-    - [Solution of Problem 3](./3-solution.md)
+  - [Solution of Problem 3](./3-solution.md)
 
   4.
   ```javascript
@@ -42,7 +44,7 @@
   }
   console.log(x);
   ```
-    - [Solution of Problem 4](./4-solution.md)
+  - [Solution of Problem 4](./4-solution.md)
 
   5.
   ```javascript
@@ -53,7 +55,7 @@
   }
   console.log(x);
   ```
-    - [Solution of Problem 5](./5-solution.md)
+  - [Solution of Problem 5](./5-solution.md)
 
   6.
   ```javascript
@@ -64,7 +66,7 @@
   const boundGreet = greet.bind(person);
   boundGreet();
   ```
-    - [Solution of Problem 6](./6-solution.md)
+  - [Solution of Problem 6](./6-solution.md)
 
   7.
   ```javascript
@@ -74,7 +76,7 @@
   const person = { name: "Bob" };
   greet.apply(person, ["Hello", "World"];
   ```
-    - [Solution of Problem 7](./7-solution.md)
+  - [Solution of Problem 7](./7-solution.md)
 
   8.
   ```javascript
@@ -84,7 +86,7 @@
   const person = { name: "Bob" };
   greet.call(person);
   ```
-    - [Solution of Problem 8](./8-solution.md)
+  - [Solution of Problem 8](./8-solution.md)
 
   9.
   ```javascript
@@ -94,7 +96,7 @@
   const person = { name: "Bob" };
   greet.call(person);
   ```
-    - [Solution of Problem 9](./9-solution.md)
+  - [Solution of Problem 9](./9-solution.md)
 
   10.
   ```javascript
@@ -108,7 +110,7 @@
   };
   obj.greet();
   ```
-    - [Solution of Problem 10](./10-solution.md)
+  - [Solution of Problem 10](./10-solution.md)
 
   11.
   ```javascript
@@ -122,6 +124,7 @@
   };
   obj.greet();
   ```
+  - [Solution of Problem 11](./11-solution.md)
 
   12.
   ```javascript
@@ -131,6 +134,7 @@
   }
   myFunction();
   ```
+  - [Solution of Problem 12](./12-solution.md)
 
   13.
   ```javascript
@@ -139,3 +143,5 @@
   }
   myFunction();
   ```
+  - [Solution of Problem 13](./13-solution.md)
+

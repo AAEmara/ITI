@@ -1,6 +1,10 @@
 let userName = localStorage.getItem("name");
 let color = localStorage.getItem("color");
 
+function initializeColorPicker() {
+  document.getElementById("color").value = color;
+}
+
 function greetUser(userName) {
   let greetMessage = "Hello!";
   if (!userName) {
@@ -33,6 +37,8 @@ function updateColor(color) {
 
 console.log(navigator.userAgent);
 console.log(`Screen's Width x Height: ${screen.width} x ${screen.height}`);
+
+initializeColorPicker();
 
 setTimeout(() => {
   alert(greetUser(userName));

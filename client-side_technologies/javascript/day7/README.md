@@ -7,6 +7,8 @@
     - [Expected Behaviour](#expected-behaviour)
 
 ## Lab 6
+[Try My Solution Now!](https://color-picker-iti.vercel.app/)
+
 ### Exercise 1
   1. **HTML Structure**
      - [x] A heading (\<h1\>) to display a greeting message.
@@ -54,3 +56,5 @@
   6. **User clicks "Clear Name" &rarr;** The name is removed from the page and 
   localStorage
   7. **After 2 seconds &rarr;** A welcome alert appears.
+
+  - [Test the Expected Behaviour Here!](https://color-picker-iti.vercel.app/)

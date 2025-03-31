@@ -73,4 +73,6 @@
   - Create a simple Web Worker (worker.js) that calculates the sum of numbers 
   up to N and post the result to the main thread.
 
-  - [Solution of Problem 6](./6-solution.md)
+  - [Solution of Problem 6](./index.html)
+  _Note: run the index.html in the browser using a server to run the workers 
+  correctly!_

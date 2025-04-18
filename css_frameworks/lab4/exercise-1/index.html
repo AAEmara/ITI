@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+        header {
+            background-color: orangered;
+        }
+
+        nav {
+            background-color: wheat;
+        }
+
+        #hero {
+            background-color: green;
+        }
+
+        #content {
+            background-color: aquamarine;
+        }
+
+        #comments {
+            background-color: yellow;
+        }
+
+        #comment-1,
+        #comment-3 {
+            background-color: grey;
+        }
+
+        #comment-2 {
+            background-color: azure;
+        }
+
+        #post-comment {
+            background-color: blueviolet;
+        }
+
+        aside {
+            background-color: bisque;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex flex-column justify-content-center" id="header">
+            <h1>The Flower Blog</h1>
+            <nav class="d-flex flex-row justify-content-evenly" id="nav">
+                <div>
+                    <a href="#">Blog</a>
+                </div>
+                <div>
+                    <a href="#">About</a>
+                </div>
+                <div>
+                    <a href="#">Archives</a>
+                </div>
+                <div>
+                    <a href="#">Contact</a>
+                </div>
+                <div>
+                    <a href="#">Subscribe via. RSS</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="d-flex mt-2" id="hero">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, exercitationem dolores? Enim, unde
+                mollitia. Culpa reiciendis, modi repellat, quo eligendi mollitia repudiandae incidunt laudantium beatae
+                magni dolorum praesentium doloremque maiores.</p>
+            <img src="./images/intro_flower.png">
+        </section>
+
+        <main class="d-flex mt-2">
+            <section class="col-7">
+                <div id="content">
+                    <h2>This is the title of a blog post</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo placeat illo deleniti quisquam
+                        minima incidunt a eaque id libero ab doloremque assumenda repellendus quas quaerat, fugit
+                        nesciunt
+                        dolorum beatae?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ipsa delectus vel qui reiciendis,
+                        exercitationem quia aperiam impedit deleniti animi assumenda, esse veniam alias nihil asperiores
+                        quaerat? Fuga, impedit eaque?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium consequuntur pariatur nihil
+                        eos
+                        in officia accusamus atque debitis rerum voluptates odit ducimus aliquid distinctio, delectus
+                        eligendi veritatis ipsum, ipsam veniam.</p>
+                </div>
+
+                <div id="comments">
+                    <h3>Comments</h3>
+                    <div id="comment-1">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui esse vel vero, voluptates,
+                            magnam
+                            id mollitia a cupiditate, ut reiciendis consectetur reprehenderit dignissimos ex ratione eos
+                            doloremque optio aliquam quis?
+                        </p>
+                    </div>
+                    <div id="comment-2">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum eligendi, magnam optio
+                            obcaecati
+                            deserunt, error illo nam quia autem natus neque nihil provident laudantium enim aliquam, in
+                            nisi
+                            nostrum eos!
+                        </p>
+                    </div>
+                    <div id="comment-3">
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi natus porro blanditiis
+                            necessitatibus similique ea quam veniam doloribus consequuntur ipsa modi, quisquam optio
+                            quod
+                            quaerat animi adipisci error assumenda consectetur.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="post-comment">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quas iste quod, quasi
+                        dignissimos
+                        accusamus consequuntur quo iure, blanditiis eum dolor, est qui natus reprehenderit. Nam iure
+                        illum
+                        molestiae sed.</p>
+                </div>
+            </section>
+            <aside class="col-3 text-center">
+                <div id="aside-1">
+                    <h4>Categories</h4>
+                </div>
+                <div id="aside-2">
+                    <h4>Archives</h4>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <footer class="d-flex justify-content-evenly">
+        <div class="col-4 text-center" id="about">
+            <h4>About</h4>
+            <ul>
+                <li>A</li>
+                <li>A</li>
+                <li>A</li>
+            </ul>
+        </div>
+        <div class="col-4 text-center" id="blogroll">
+            <h4>Blogroll</h4>
+            <ul>
+                <li>A</li>
+                <li>A</li>
+                <li>A</li>
+            </ul>
+        </div>
+        <div class="col-4 text-center" id="popular">
+            <h4>Popular</h4>
+            <ul>
+                <li>A</li>
+                <li>A</li>
+                <li>A</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

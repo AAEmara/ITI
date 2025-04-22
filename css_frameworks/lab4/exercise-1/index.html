@@ -7,7 +7,7 @@
     <title>Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <style>
+    <!-- <style>
         header {
             background-color: orangered;
         }
@@ -49,43 +49,47 @@
             background-color: black;
             color: white;
         }
-    </style>
+    </style> -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <header class="d-flex flex-column justify-content-center" id="header">
             <h1>The Flower Blog</h1>
-            <nav class="d-flex flex-row justify-content-evenly" id="nav">
-                <div>
-                    <a href="#">Blog</a>
-                </div>
-                <div>
-                    <a href="#">About</a>
-                </div>
-                <div>
-                    <a href="#">Archives</a>
-                </div>
-                <div>
-                    <a href="#">Contact</a>
-                </div>
-                <div>
-                    <a href="#">Subscribe via. RSS</a>
-                </div>
-            </nav>
         </header>
 
+        <nav id="nav">
+            <ul class="d-flex flex-row justify-content-evenly">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Archives</a></li>
+                <li><a href="#">Contact</a></li>
+                <li id="subscribe"><a href="#">Subscribe via. RSS</a></li>
+            </ul>
+        </nav>
+
         <section class="d-flex mt-2" id="hero">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, exercitationem dolores? Enim, unde
-                mollitia. Culpa reiciendis, modi repellat, quo eligendi mollitia repudiandae incidunt laudantium beatae
-                magni dolorum praesentium doloremque maiores.</p>
-            <img src="./images/intro_flower.png">
+            <div id="hero-content">
+                <h2>
+                    Do you love flowers as much as we do?
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut.
+                </p>
+            </div>
+            <div id="hero-img">
+                <img class="img-fluid w-100 h-100" src="./images/intro_flower.png">
+            </div>
         </section>
 
         <main class="d-flex mt-2">
             <section class="col-7">
                 <div id="content">
                     <h2>This is the title of a blog post</h2>
+                    <p>Posted on June 29th 2009 by <a href="#">Mads Kjaer</a> - <a href="#comments">3 comments</a></p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo placeat illo deleniti quisquam
                         minima incidunt a eaque id libero ab doloremque assumenda repellendus quas quaerat, fugit
                         nesciunt
@@ -102,6 +106,9 @@
                 <div id="comments">
                     <h3>Comments</h3>
                     <div id="comment-1">
+                        <header>
+                            <a href="#">George Washington</a> on June 29th 2009 at 23:35
+                        </header>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui esse vel vero, voluptates,
                             magnam
@@ -110,6 +117,9 @@
                         </p>
                     </div>
                     <div id="comment-2">
+                        <header>
+                            <a href="#">Benjamin Franklin</a> on June 29th 2009 at 23:40
+                        </header>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum eligendi, magnam optio
                             obcaecati
@@ -119,6 +129,9 @@
                         </p>
                     </div>
                     <div id="comment-3">
+                        <header>
+                            <a href="#">Barack Obama</a> on June 29th 2009 at 23:59
+                        </header>
                         <p>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi natus porro blanditiis
                             necessitatibus similique ea quam veniam doloribus consequuntur ipsa modi, quisquam optio
@@ -128,20 +141,56 @@
                     </div>
                 </div>
 
-                <div id="post-comment">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quas iste quod, quasi
-                        dignissimos
-                        accusamus consequuntur quo iure, blanditiis eum dolor, est qui natus reprehenderit. Nam iure
-                        illum
-                        molestiae sed.</p>
-                </div>
+                <form action="#" method="post">
+                    <h3>
+                        Post a comment</h3>
+                    <p>
+                        <label for="name">
+                            Name</label>
+                        <input name="name" id="name" type="text">
+                    </p>
+                    <p>
+                        <label for="email">
+                            E-mail</label>
+                        <input name="email" id="email" type="text">
+                    </p>
+                    <p>
+                        <label for="website">
+                            Website</label>
+                        <input name="website" id="website" type="text">
+                    </p>
+                    <p>
+                        <label for="comment">
+                            Comment</label>
+                        <textarea name="comment" id="comment"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Post comment">
+                    </p>
+                </form>
             </section>
             <aside class="col-3 text-center">
                 <div id="aside-1">
                     <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor</a></li>
+                        <li><a href="#">Sit amet consectetur</a></li>
+                        <li><a href="#">Adipisicing elit sed</a></li>
+                        <li><a href="#">Do eiusmod tempor</a></li>
+                        <li><a href="#">Incididunt ut labore</a></li>
+                    </ul>
                 </div>
                 <div id="aside-2">
                     <h4>Archives</h4>
+                    <ul>
+                        <li><a href="#">December 2008</a></li>
+                        <li><a href="#">January 2009</a></li>
+                        <li><a href="#">February 2009</a></li>
+                        <li><a href="#">March 2009</a></li>
+                        <li><a href="#">April 2009</a></li>
+                        <li><a href="#">May 2009</a></li>
+                        <li><a href="#">June 2009</a></li>
+                    </ul>
                 </div>
             </aside>
         </main>
@@ -150,26 +199,36 @@
     <footer class="d-flex justify-content-evenly">
         <div class="col-4 text-center" id="about">
             <h4>About</h4>
-            <ul>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
-            </ul>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco <a href="#">laboris nisi ut aliquip</a> ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+            </p>
         </div>
         <div class="col-4 text-center" id="blogroll">
             <h4>Blogroll</h4>
             <ul>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
+                <li><a href="#">NETTUTS+</a></li>
+                <li><a href="#">FreelanceSwitch</a></li>
+                <li><a href="#">In The Woods</a></li>
+                <li><a href="#">Netsetter</a></li>
+                <li><a href="#">PSDTUTS+</a></li>
             </ul>
         </div>
         <div class="col-4 text-center" id="popular">
             <h4>Popular</h4>
             <ul>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
+                <li><a href="#">This is the title of a blog post</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li><a href="#">Consectetur adipisicing elit, sed do eiusmod</a></li>
+                <li><a href="#">Duis aute irure dolor</a></li>
+                <li><a href="#">Excepteur sint occaecat cupidatat</a></li>
+                <li><a href="#">Reprehenderit in voluptate velit</a></li>
+                <li><a href="#">Officia deserunt mollit anim id est laborum</a></li>
+                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
             </ul>
         </div>
     </footer>

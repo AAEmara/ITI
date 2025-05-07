@@ -1,6 +1,8 @@
 # Introduction to PostgreSQL Database
 
 ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
   - [Exercise 3](#exercise-3)
@@ -10,6 +12,86 @@
   - [Exercise 7](#exercise-7)
   - [Exercise 8](#exercise-8)
   - [Exercise 9](#exercise-9)
+
+## Installation
+  1. Using Ubuntu 22.04: update your machine, and install postgresql.
+  ```bash
+  sudo apt update
+  sudo apt install postgresql -y
+  ```
+
+  2. Start PostgreSQL
+  ```bash
+  sudo service postgresql start
+  sudo service postgresql status
+  ```
+
+## Usage
+  1. Switch your current user to PostgreSQL user.
+  ```bash
+  sudo -i -u postgres
+  ```
+  - This should result in the following output:
+  ```bash
+  postgres@your-machine:~$
+  ```
+
+  2. Run psql
+  ```bash
+  postgres@your-machine:~$ psql
+  ```
+
+  3. Create the pagila database
+  ```bash
+  psql=# CREATE DATABASE pagila;
+  ```
+
+  4. Exit psql, by writing `\q` and striking the `Enter` or `Return` button.
+  ```bash
+  psql=# \q
+  ```
+  5. Import the Pagila Schema
+  ```bash
+  postgres@your-machine:~$ psql -d pagila -f pagila-schema.sql
+  ```
+
+  6. Import the Pgila Data
+  ```bash
+  postgres@your-machine:~$ psql -d pagila -f pagila-insert-data.sql
+  ```
+
+  7. Verify the import
+  ```bash
+  postgres@your-machine:~$ psql -d pagila
+  ```
+
+  8. Check the tables
+  ```bash
+  psql=# \dt
+  ```
+
+  9. Check the data was loaded
+  ```bash
+  psql=# SELECT COUNT(*) FROM film;
+  ```
+
+  10. From a new terminal, write your SQL Queries in a file and copy them to 
+  the `/tmp` dir .
+  ```bash
+  user@your-machine:~/sql-dir$ cp *.sql /tmp
+  ```
+
+  11. Return to the older terminal and exit
+  ```bash
+  psql=# \q
+  ```
+
+  12. Run one of your SQL Query files
+  ```bash
+  postgres@your-machine:~$ psql -d pagila -f /tmp/your-sql-query-file.sql
+  ```
+
+  13. **The result will appear afterward!**
 
 ## Exercise 1
   1. List all rentals with customer names.

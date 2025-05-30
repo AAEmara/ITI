@@ -1,0 +1,16 @@
+#product-title {
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+#product-title:hover {
+    color: green;
+}
+
+#product-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+#product-card:hover {
+    transform: scale(1.05);
+}

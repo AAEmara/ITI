@@ -1,0 +1,51 @@
+{% extends 'main/base_layout.html' %}
+
+{# override block title #}
+
+{% block title %}
+Books List
+{% endblock%}
+
+{% block main-content %}
+<table>
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                {{ id }}
+            </td>
+            <td>
+                {{ name }}
+            </td>
+            <td>
+                {{ author }}
+            </td>
+            <td>
+                {{ price }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="{% url 'home' %}">
+    <button>Back to Home</button>
+</a>
+<a href="{% url 'booksapp:books-list' %}">
+    <button>Back to Books List</button>
+</a>
+{% endblock %}

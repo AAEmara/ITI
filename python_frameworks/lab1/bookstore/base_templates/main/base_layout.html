@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Bookstore | Home
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    {% include 'main/header.html' %}
+
+    {% block main-content %}
+    <h2>Please Choose an Option</h2>
+    <a href="{% url 'booksapp:book-create' %}">
+        <button>Create a New Book</button>
+    </a>
+    <a href="{% url 'booksapp:books-list' %}">
+        <button>View books list</button>
+    </a>
+    {% endblock %}
+
+    {% include 'main/footer.html' %}
+</body>
+
+</html>

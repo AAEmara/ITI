@@ -1,0 +1,223 @@
+/* Hero Section Styles Start*/
+#hero {
+  width: 100vw;
+  height: 420px;
+  background-image: url(./assets/heroBackground.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#hero h1 {
+  margin: 0;
+  padding: 50px 0 0 0;
+  font-size: 46px;
+  color: white;
+}
+
+#hero h2 {
+  font-size: 30px;
+  color: var(--pink);
+  margin: 6px 0px 24px;
+}
+
+#contact-btn1 {
+  width: 140px;
+  height: 60px;
+  border-width: 0px;
+  border-radius: 8px;
+  background-color: var(--lavender);
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact-btn1:hover {
+  background-color: var(--dark-lavender);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+
+/* Hero Section Styles End */
+
+/* Footer Section Styles Start */
+footer {
+  background-color: #080A81;
+  padding: 32px 0;
+  color: white;
+  width: 100%;
+}
+
+
+#contact-header {
+  font-size: 28px;
+  font-weight: var(--roboto-weight-medium);
+  margin: 0px;
+}
+
+/* #contact-links {
+  display: flex;
+  flex-direction: column;
+} */
+
+#contact-links {
+  font-size: 16px;
+  margin: 0px;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+#contact-links:hover {
+  font-size: 16px;
+  margin: 0px;
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+#contact-links span {
+  padding-left: 4px;
+}
+
+/* #contact-btn2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--lavender);
+} */
+
+#contact-btn2 {
+  width: 140px;
+  height: 38px;
+  border-width: 0px;
+  border-radius: 4px;
+  background-color: var(--lavender);
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+#contact-btn2:hover {
+  background-color: var(--dark-lavender);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
+#social-links {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* 
+
+#social-links i {
+  color: white;
+}
+
+.fa-github,
+.fa-x-twitter {
+  padding-left: 8px;
+}
+*/
+
+#copyright {
+  font-size: 14px;
+  color: white;
+}
+
+/* Footer Section Styles End */
+
+/* Bio Section Styles Start */
+
+#bio-image {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+}
+
+/* #bio-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+#about-me-title h3 {
+  margin: 0px;
+  margin-top: 20px;
+}
+*/
+
+#about-me-title {
+  width: 100%;
+  font-size: 36px;
+  color: var(--dark-navy)
+}
+
+#bio-content {
+  font-size: 20px;
+}
+
+#download-resume-btn1 {
+  width: 220px;
+  height: 50px;
+  margin-bottom: 24px;
+  border-width: 0px;
+  border-radius: 4px;
+  background-color: var(--pink);
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+#download-resume-btn1:hover {
+  background-color: var(--dark-pink);
+  color: var(--dark-navy);
+  cursor: pointer;
+  transform: scale(1.025);
+}
+
+/* Bio Section Styles End */
+
+/* Skills Section Styles Start */
+#skills-section {
+  background-color: #080A81;
+  color: white;
+}
+
+#skills-title {
+  font-size: 36px;
+}
+
+/* Skills Section Styles End */
+
+#skill-name {
+  width: 100px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#focus-title {
+  font-size: 26px;
+  text-align: center;
+  border-bottom: 3px solid;
+  padding-bottom: 8px;
+}
+
+#focus-content {
+  font-size: 20px;
+  list-style-type: none;
+  margin-bottom: 6px;
+  padding-left: 4px;
+}

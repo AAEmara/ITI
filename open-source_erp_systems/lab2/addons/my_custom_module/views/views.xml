@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="courses_action_window">
+            <field name="name">Courses</field>
+            <field name="res_model">my.course</field>
+            <field name="view_mode">tree,form,pivot,graph,kanban</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem name="Courses App" id="courses_root_menu"/>
+        <menuitem name="Courses" id="courses_menu" action="courses_action_window" parent="courses_root_menu"/>
+    </data>
+</odoo>

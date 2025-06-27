@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# Put the docker-compose services down
+
+sudo docker compose -f docker-compose.yml --env-file .env down

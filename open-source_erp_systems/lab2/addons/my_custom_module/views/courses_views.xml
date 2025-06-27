@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_courses_tree">
+            <field name="name">my.course.tree</field>
+            <field name="model">my.course</field>
+            <field name="arch" type="xml">
+                <tree string="Courses List">
+                    <field name="name"/>
+                    <field name="teacher"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_courses_form">
+            <field name="name">my.course.form</field>
+            <field name="model">my.course</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="teacher" />
+                            <field name="start_date" />
+                            <field name="end_date" />
+                            <field name="cost" />                    
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_courses_pivot">
+            <field name="name">my.course.pivot</field>
+            <field name="model">my.course</field>
+            <field name="arch" type="xml">
+                <pivot string="Courses Pivot">
+                    <field name="name" type="row" />
+                    <field name="cost" type="measure" />
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_courses_graph">
+            <field name="name">my.course.pivot</field>
+            <field name="model">my.course</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="name" type="category"/>
+                    <field name="cost" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_courses_kanban">
+            <field name="name">my.course.kanban</field>
+            <field name="model">my.course</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name" />
+                    <field name="cost" />
+                    <template>
+                        <t t-name="kanban-box">
+                            <div class="o_kanban_global_click">
+                                <strong><field name="name" /></strong><br />
+                                <span><field name="cost" /></span>
+                            </div>
+                        </t>
+                    </template>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

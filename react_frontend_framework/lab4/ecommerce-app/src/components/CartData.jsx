@@ -1,4 +1,5 @@
 import QuantityButton from "./QuantityButton";
+import RemoveItemButton from "./RemoveItemButton";
 
 const CartData = ({ productData }) => {
   const productImage = productData.image;
@@ -29,7 +30,9 @@ const CartData = ({ productData }) => {
       <td>
         <QuantityButton productData={productData} />
       </td>
-      <td></td>
+      <td>
+        <RemoveItemButton productData={productData}></RemoveItemButton>
+      </td>
       <td style={{ fontWeight: "bold" }}>${productPrice}</td>
     </tr>
   );

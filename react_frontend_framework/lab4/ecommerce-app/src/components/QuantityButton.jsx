@@ -12,6 +12,15 @@ const QuantityButton = ({ productData }) => {
       <div>
         <ButtonGroup>
           <Button
+            className="rounded-end"
+            variant="secondary"
+            onClick={() => updateIncreasedQuantity()}
+            disabled={productData.quantity >= productData.stock} // TODO: Fix the stock bug
+          >
+            +
+          </Button>
+          <Button variant="secondary">{productData.quantity}</Button>
+          <Button
             size="lg"
             className="rounded-start"
             variant="secondary"
@@ -19,15 +28,6 @@ const QuantityButton = ({ productData }) => {
             disabled={productData.quantity <= 1}
           >
             -
-          </Button>
-          <Button variant="secondary">{productData.quantity}</Button>
-          <Button
-            className="rounded-end"
-            variant="secondary"
-            onClick={() => updateIncreasedQuantity()}
-            disabled={productData.quantity >= productData.stock} // TODO: Fix the stock bug
-          >
-            +
           </Button>
         </ButtonGroup>
       </div>

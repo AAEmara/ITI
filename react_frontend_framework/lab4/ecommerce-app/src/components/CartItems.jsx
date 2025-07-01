@@ -4,6 +4,7 @@ import CartData from "./CartData";
 
 const CartItems = () => {
   const cartProducts = useSelector((state) => state.cart.cartProducts);
+  const cartTotalPrice = useSelector((state) => state.cart.totalPrice);
   return (
     <>
       <Table>
@@ -22,6 +23,15 @@ const CartItems = () => {
             ))}
         </tbody>
       </Table>
+      <div className="d-flex justify-content-end">
+        <div
+          className="border p-3 d-flex justify-content-between align-items-center"
+          style={{ maxWidth: "300px" }}
+        >
+          <strong>Total:</strong>
+          <span>${cartTotalPrice.toFixed(2)}</span>
+        </div>
+      </div>
     </>
   );
 };

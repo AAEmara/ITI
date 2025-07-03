@@ -1,0 +1,37 @@
+{% extends 'bookstore_lab3_app/base.html' %}
+{% block content %}
+<h1>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Book</h1>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.non_field_errors }}
+
+  <p>
+    {{ form.title.label_tag }}<br>
+    {{ form.title }}<br>
+    {{ form.title.errors }}
+  </p>
+
+  <p>
+    {{ form.desc.label_tag }}<br>
+    {{ form.desc }}<br>
+    {{ form.desc.errors }}
+  </p>
+
+  <p>
+    {{ form.rate.label_tag }}<br>
+    {{ form.rate }}<br>
+    {{ form.rate.errors }}
+  </p>
+
+  <p>
+    {{ form.categories.label_tag }}<br>
+    {{ form.categories }}<br>
+    {{ form.categories.errors }}
+  </p>
+
+  <button type="submit">Save</button>
+</form>
+
+<a href="{% url 'book_list' %}">Back to list</a>
+{% endblock %}

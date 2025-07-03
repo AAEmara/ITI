@@ -1,0 +1,11 @@
+{% extends 'bookstore_lab3_app/base.html' %}
+{% block content %}
+<h1>Confirm Delete</h1>
+<p>Are you sure you want to delete "{{ book.title }}"?</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirm</button>
+  <a href="{% url 'book_detail' book.pk %}">Cancel</a>
+</form>
+{% endblock %}

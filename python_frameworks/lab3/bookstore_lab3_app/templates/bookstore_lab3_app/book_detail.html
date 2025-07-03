@@ -1,0 +1,29 @@
+{% extends 'bookstore_lab3_app/base.html' %}
+{% block content %}
+<h1>{{ book.title }}</h1>
+
+<p><strong>Description:</strong> {{ book.desc }}</p>
+<p><strong>Rate:</strong> {{ book.rate }}</p>
+<p><strong>Views:</strong> {{ book.views }}</p>
+
+<p><strong>ISBN Number:</strong> {{ book.isbn.isbn_number }}</p>
+<p><strong>Author Title:</strong> {{ book.isbn.author_title }}</p>
+
+<p><strong>Categories:</strong>
+  {% for category in book.categories.all %}
+    {{ category.name }}{% if not forloop.last %}, {% endif %}
+  {% empty %}
+    None
+  {% endfor %}
+</p>
+
+<p><strong>Owner:</strong> {{ book.user.username }}</p>
+
+<a href="{% url 'book_list' %}">Back to list</a>
+
+{% if user == book.user or user.is_staff %}
+  | <a href="{% url 'book_edit' book.pk %}">Edit</a>
+  | <a href="{% url 'book_delete' book.pk %}">Delete</a>
+{% endif %}
+
+{% endblock %}

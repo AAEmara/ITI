@@ -9,3 +9,4 @@ class Course(models.Model):
     end_date = fields.Date(string='End Date')
     cost = fields.Float(string='Cost')
     teacher = fields.Char(string='Teacher')
+    enrollments_ids = fields.One2many('my.enrollment', 'course_id', string='Enrollments')

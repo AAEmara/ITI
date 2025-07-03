@@ -9,6 +9,8 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/courses_views.xml',
+        'views/students_views.xml',
+        'views/enrollments_views.xml',
         ],
     'installable': True,
     'application': True

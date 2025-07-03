@@ -9,6 +9,7 @@ services:
       - HOST=db
     volumes:
       - ./addons:/mnt/extra-addons
+      - odoo-web-data:/var/lib/odoo
   db:
     image: postgres:15
     environment:
@@ -20,3 +21,4 @@ services:
 
 volumes:
   odoo-db-data:
+  odoo-web-data:

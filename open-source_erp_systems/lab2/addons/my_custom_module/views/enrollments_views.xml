@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_enrollments_tree">
+            <field name="name">my.enrollment.tree</field>
+            <field name="model">my.enrollment</field>
+            <field name="arch" type="xml">
+                <tree string="Enrollments List">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="course_id"/>
+                    <field name="date"/>
+                    <field name="cost"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_courses_form">
+            <field name="name">my.course.name</field>
+            <field name="model">my.course</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="cost"/>
+                            <field name="teacher"/>
+                        </group>
+                        <notebook>
+                            <page>
+                                <field name="enrollments_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="student_id"/>
+                                        <field name="date"/>
+                                        <field name="cost"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

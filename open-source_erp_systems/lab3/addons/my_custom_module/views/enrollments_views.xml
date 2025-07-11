@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_enrollments_tree">
+            <field name="name">my.enrollment.tree</field>
+            <field name="model">my.enrollment</field>
+            <field name="arch" type="xml">
+                <tree string="Enrollments List">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="course_id"/>
+                    <field name="date"/>
+                    <field name="cost"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

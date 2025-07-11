@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record model="ir.actions.report" id="print_course_report">
+            <field name="name">Course Enrollments</field>
+            <field name="model">my.course</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">my_custom_module.course_report_document</field>
+            <field name="report_file">my_custom_module.course_report_document</field>
+            <field name="print_report_name">'%s' % object.name</field>
+            <field name="binding_model_id" ref="model_my_course"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <template id="course_report_document">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="doc">
+                        <div class="page">
+                            <h1>
+                                <span t-field="doc.name"/>
+                            </h1>
+
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Student</th>
+                                        <th>Enrollment Date</th>
+                                        <th>Course Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.enrollments_ids" t-as="enrollment">
+                                        <tr>
+                                            <td>
+                                                <span t-field="enrollment.student_id"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="enrollment.date"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="enrollment.cost"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

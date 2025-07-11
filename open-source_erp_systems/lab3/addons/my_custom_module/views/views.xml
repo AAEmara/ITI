@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="courses_action_window">
+            <field name="name">Courses</field>
+            <field name="res_model">my.course</field>
+            <field name="view_mode">tree,form,pivot,graph,kanban</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem name="Courses App" id="courses_root_menu"/>
+        <menuitem name="Courses" id="courses_menu" action="courses_action_window" parent="courses_root_menu"/>
+
+        <record model="ir.actions.act_window" id="students_action_window">
+            <field name="name">Students</field>
+            <field name="res_model">my.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem name="Students App" id="students_root_menu"/>
+        <menuitem name="Students" id="students_menu" action="students_action_window" parent="students_root_menu"/>
+
+        <record model="ir.actions.act_window" id="enrollments_action_window">
+            <field name="name">Enrollments</field>
+            <field name="res_model">my.enrollment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <menuitem name="Enrollments App" id="enrollments_root_menu"/>
+        <menuitem name="Enrollments" id="enrollments_menu" action="enrollments_action_window" parent="enrollments_root_menu"/>
+    </data>
+</odoo>

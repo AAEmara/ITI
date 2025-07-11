@@ -1,0 +1,20 @@
+<odoo>
+    <record model="ir.ui.view" id="close_reason_view_form">
+        <field name="name">close.reason.view.form</field>
+        <field name="model">course.close.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Close Reason">
+                <sheet>
+                    <group>
+                        <field name="reason"/>
+                        <field name="course_id" invisible="0" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button string="Close Course" name="confirm_reason" type="object" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# Restarts the docker-compose services
+
+sudo docker compose -f docker-compose.yml --env-file .env restart

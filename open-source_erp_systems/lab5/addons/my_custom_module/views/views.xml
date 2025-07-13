@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+   
+    <record id="add_car_number_in_sale_order_form_view" model="ir.ui.view">
+      <field name="name">Add.Car.Number.sale.order</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group[@name='order_details']" position="inside">
+          <field name='car_number'/>
+        </xpath>
+
+        <xpath expr="//list/field[@name='product_template_id']" position="after">
+          <field name='brand'/>
+        </xpath>
+
+        <xpath expr="//list/field[@name='price_unit']" position="attributes">
+          <attribute name="groups">edit_in_system.access_so_price_unit</attribute>
+        </xpath>
+
+      </field>
+    </record>
+
+    <record id="add_car_number_in_sale_order_list_view" model="ir.ui.view">
+      <field name="name">add.car.number.sale.order.list</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.sale_order_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name='car_number'/>
+          
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="access_so_price_unit" model="res.groups">
+        <field name="name">Access SO Price Unit</field>
+        </record>
+    </odoo>

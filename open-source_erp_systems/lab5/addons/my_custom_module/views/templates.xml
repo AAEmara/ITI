@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="add_brand_to_so_pdf" name="Add Brand" inherit_id="sale.report_saleorder_document">
+    <xpath expr="//div[@t-if='doc.user_id.name']" position="after">
+  <t t-foreach="doc.order_line" t-as="line">
+    <t t-if="line.brand">
+      <div class="col">
+        <strong>Brand</strong>
+        <div>
+          <span t-field="line.brand"/>
+        </div>
+      </div>
+    </t>
+  </t>
+</xpath>
+
+
+
+
+      <!-- <xpath expr="//div[@id='informations']/div[4]" position="after">
+  
+    </xpath> -->
+
+  </template>
+
+</odoo>

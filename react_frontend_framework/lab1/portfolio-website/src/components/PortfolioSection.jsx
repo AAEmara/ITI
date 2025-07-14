@@ -55,36 +55,38 @@ const PortfolioSection = () => {
       <h1>Portfolio</h1>
       <Row className="d-flex justify-content-center">
         {projects.map((project) => (
-          <Col xs={12} sm={6} md={3} key={project.name}>
-            <Card className="my-3">
-              <Card.Img variant="top" src={project.img} />
-              <Card.Title className="pt-1 ps-1">{project.name}</Card.Title>
-              <Card.Text>{project.description}</Card.Text>
-              <div className="d-flex justify-content-center">
-                {project.technologies.map((technology, idx) => {
-                  if (technology.type === "fontawesome") {
-                    return (
-                      <FontAwesomeIcon
-                        className="me-2"
-                        icon={technology.icon}
-                        size="2x"
-                        key={idx}
-                      />
-                    );
-                  } else if (technology.type === "image") {
-                    return (
-                      <img
-                        className="me-2"
-                        src={technology.icon}
-                        style={{ width: 32, height: 32 }}
-                        key={idx}
-                      />
-                    );
-                  }
-                })}
-              </div>
-            </Card>
-          </Col>
+            <Col xs={12} sm={6} md={3} key={project.name}>
+              <a href={project.github}>
+                <Card className="my-3" id="portfolio-card">
+                  <Card.Img variant="top" src={project.img} />
+                  <Card.Title className="pt-1 ps-1">{project.name}</Card.Title>
+                  <Card.Text>{project.description}</Card.Text>
+                  <div className="d-flex justify-content-center">
+                    {project.technologies.map((technology, idx) => {
+                      if (technology.type === "fontawesome") {
+                        return (
+                          <FontAwesomeIcon
+                            className="me-2"
+                            icon={technology.icon}
+                            size="2x"
+                            key={idx}
+                          />
+                        );
+                      } else if (technology.type === "image") {
+                        return (
+                          <img
+                            className="me-2"
+                            src={technology.icon}
+                            style={{ width: 32, height: 32 }}
+                            key={idx}
+                          />
+                        );
+                      }
+                    })}
+                  </div>
+                </Card>
+              </a>
+            </Col>
         ))}
       </Row>
     </Container>

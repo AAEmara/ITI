@@ -200,8 +200,6 @@ footer {
   font-size: 36px;
 }
 
-/* Skills Section Styles End */
-
 #skill-name {
   width: 100px;
   font-weight: 700;
@@ -221,3 +219,10 @@ footer {
   margin-bottom: 6px;
   padding-left: 4px;
 }
+/* Skills Section Styles End */
+
+/* Portfolio Section Styles Start */
+#portfolio-card {
+  cursor: pointer;
+}
+/* Portfolio Section Styles End */

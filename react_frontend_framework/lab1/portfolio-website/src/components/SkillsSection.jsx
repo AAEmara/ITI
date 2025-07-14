@@ -3,13 +3,16 @@ import { Container, Col, Row, ProgressBar } from "react-bootstrap";
 
 const SkillsSection = () => {
   const skills = [
+    { name: "Linux", value: 95 },
+    { name: "GitHub", value: 95 },
+    { name: "Git", value: 95 },
+    { name: "Node.js", value: 85 },
+    { name: "Django", value: 80 },
+    { name: "Flask", value: 80 },
+    { name: "Bootstrap5", value: 90 },
     { name: "HTML", value: 90 },
     { name: "CSS", value: 80 },
-    { name: "Bootstrap5", value: 90 },
-    { name: "React.js", value: 75 },
-    { name: "Node.js", value: 80 },
-    { name: "Django", value: 60 },
-    { name: "Flask", value: 75 },
+    { name: "React.js", value: 80 },
   ];
   const focus = [
     "Web Development",
@@ -28,10 +31,12 @@ const SkillsSection = () => {
         <Row>
           <Col className="text-center">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
-              culpa autem magni harum consequatur, iure commodi dolores soluta,
-              sapiente iste quam corporis odio recusandae veritatis beatae
-              libero facere unde voluptates.
+              Fullstack Developer passionate about building robust, 
+              scalable web apps with Flask, Django, Node.js, and React.js.
+               I thrive in Linux environments, with strong proficiency in 
+               Git and GitHub for version control, collaboration, and CI/CD workflows. 
+               Skilled in PostgreSQL, MongoDB, and Docker, with a 
+               backend-first mindset and a love for clean, maintainable code.
             </p>
           </Col>
         </Row>

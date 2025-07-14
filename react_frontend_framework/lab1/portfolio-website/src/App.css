@@ -28,7 +28,7 @@
 
 #contact-btn1 {
   width: 140px;
-  height: 60px;
+  padding: 12px 20px;
   border-width: 0px;
   border-radius: 8px;
   background-color: var(--lavender);

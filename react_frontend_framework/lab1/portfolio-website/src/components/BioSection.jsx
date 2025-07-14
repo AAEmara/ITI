@@ -37,7 +37,7 @@ const BioSection = () => (
           <Button
             id="download-resume-btn1"
             as="a"
-            href="https://drive.google.com/uc?export=download&id=1UaM6OVtCUNrp4__b8KB3dln0iaHRTuvs"
+            href="https://drive.google.com/uc?export=download&id=1DnwhbVQG-opCfSEday6DaK1XUI9FhBa8"
             target="_blank"
             download
           >
